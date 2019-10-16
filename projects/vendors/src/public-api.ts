@@ -3,5 +3,5 @@
  */
 
 export * from './lib/vendors.service';
-export * from './lib/vendors.component';
 export * from './lib/vendors.module';
+export * from './lib/material/material.module';

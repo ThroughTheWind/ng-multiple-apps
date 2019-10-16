@@ -14,9 +14,12 @@
 // hue. Available color palettes: https://material.io/design/color/
 $client-primary: mat-palette($mat-indigo);
 $client-accent: mat-palette($mat-pink, A200, A100, A400);
+$client-success: mat-palette($mat-light-green);
+$client-info: mat-palette($mat-light-blue);
 
 // The warn palette is optional (defaults to red).
 $client-warn: mat-palette($mat-red);
+
 
 // Create the theme object (a Sass map containing all of the palettes).
 $client-theme: mat-light-theme($client-primary, $client-accent, $client-warn);
@@ -26,3 +29,15 @@ $client-theme: mat-light-theme($client-primary, $client-accent, $client-warn);
 // that you are using.
 @include angular-material-theme($client-theme);
 
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-blue-grey);
+$dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+$dark-warn:    mat-palette($mat-deep-orange);
+$dark-success: mat-palette($mat-light-green);
+$dark-info: mat-palette($mat-light-blue);
+
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+}
